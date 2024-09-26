@@ -1,0 +1,80 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+.hide {
+    display: none;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+li {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #5f28a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px; /* Adds space between the text and button */
+}
+li:hover {
+    background-color: #cc11cc;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #5f28a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Adds space between the text and button */
+    
+}
+
+button:hover {
+    background-color: #cc11cc;
+}
+
+#feedback {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
