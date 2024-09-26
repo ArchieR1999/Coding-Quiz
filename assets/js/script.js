@@ -10,11 +10,25 @@ const questions = [
         choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
         answer: 2
     },
-    
+    {
+        question: "Arrays in JavaScript can be used to store _________.",
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        answer: 3
+    },
+    {
+        question: "String values must be enclosed within ______ when being assigned to variables.",
+        choices: ["commas", "curly brackets", "quotes", "parenthesis"],
+        answer: 2
+    },
+    {
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
+        answer: 3
+    }
 ];
 
 let currentQuestionIndex = 0;
-let time = 75;
+let time = 76;
 let timerInterval;
 
 const startScreen = document.getElementById('start-screen');
@@ -37,13 +51,22 @@ document.getElementById('start-btn').addEventListener('click', function() {
     startTimer();
     showQuestion();
 });
-// Show high scores on click ONLY if game has not started
-
+// Show high scores on click BUT ALSO WORKS WHEN THE GAME BEGINS SO THAT MUST BE CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// document.getElementById('view-high-scores').addEventListener('click', function() {
+//     if ()
+//     startScreen.classList.add('hide');
+//     showHighScores();
+// });
 
 
 
 // Start timer
 function startTimer() {
+    // Run the countdown logic immediately
+    time--;
+    timerElement.textContent = time;
+
+    // Then set the interval to continue every second
     timerInterval = setInterval(function() {
         time--;
         timerElement.textContent = time;
@@ -99,7 +122,8 @@ function endQuiz() {
     clearInterval(timerInterval);
     quizSection.classList.add('hide');
     endScreen.classList.remove('hide');
-    finalScore.textContent = time; // Final score is the remaining time
+    // Final score is the remaining time
+    finalScore.textContent = time;
 }
 
 // Submit high score
@@ -149,7 +173,8 @@ document.getElementById('clear-scores').addEventListener('click', function() {
 
 // Reset the quiz
 function resetQuiz() {
+   
     currentQuestionIndex = 0;
-    time = 75;
-    timerElement.textContent = time;
+    time = 76;
+    timerElement.textContent = 0;
 }

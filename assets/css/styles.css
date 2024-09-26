@@ -30,8 +30,9 @@ a {
 main {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
 }
 
 .hide {
@@ -42,10 +43,19 @@ h1, h2 {
     text-align: center;
 }
 
-ul {
-    list-style-type: none;
+li {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #5f28a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px; /* Adds space between the text and button */
 }
-
+li:hover {
+    background-color: #cc11cc;
+}
 button {
     padding: 10px 20px;
     font-size: 1.2em;
@@ -54,7 +64,8 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-
+    margin-top: 20px; /* Adds space between the text and button */
+    
 }
 
 button:hover {
